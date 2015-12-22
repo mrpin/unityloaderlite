@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mrpin game</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<!--stylesheets-->
+
+<!--js-->
+
+  <script src="bin/unityloaderlite-1.0.min.js"></script>
+  
+</head>
+
+<body>
+    <canvas id="game_content" oncontextmenu="event.preventDefault()" width="800px" height="600px">
+      <!--do nothing-->
+    </canvas>
+
+<script>
+    var params_webgl = {};
+
+    //optional. id for canvas, default - 'canvas'
+    params_webgl["id"] = "game_content"; 
+
+    // required.
+    // ATTENTION: should be unique for each build.
+    // Need for check different versions in cache.
+    // I use timestamp when file uploaded to server.
+    params_webgl["package_version"] = 1;
+
+    //required.
+    params_webgl["url_data"] = 'example/websockets_example.datagz';
+    //required.
+    params_webgl["url_mem"] = 'example/websockets_example.memgz';
+    //required.
+    params_webgl["url_bin"] = 'example/websockets_example.jsgz';
+
+    //optional. default - 256 mb
+    params_webgl["memory"] = 512 * 1024 * 1024;
+    //optional. default - false. enable/disable verbose logging
+    params_webgl["verbose"] = true;
+
+    //optional.  default - true
+    params_webgl["need_decompress"] = true;
+    //optional.  default - true
+    params_webgl["show_preloader"] = true;
+
+    unityloaderlite.embedWebGL(params_webgl);
+</script>
+
+</body>
+
+</html>
