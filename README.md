@@ -1,5 +1,4 @@
 # unityloaderlite
-# license MIT
 
 please see index.html
 
@@ -77,4 +76,9 @@ please see index.html
     }
  ```
 
+#License and copyright
+
+unityloader is copyrighted free software made available under the terms of either the MIT.
+
+Copyright: © 2015-16 by Gregory Tkach.
 
